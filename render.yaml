@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: recomendaciones-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    rootDir: backend
+
+  - type: web
+    name: recomendaciones-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    rootDir: frontend
