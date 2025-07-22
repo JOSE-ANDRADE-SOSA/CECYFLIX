@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: recomendaciones-frontend
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s build
+    rootDir: frontend
